@@ -37,18 +37,16 @@
     $no=1;
     foreach($data_all as $da)
     {
-        echo'<tr>
-        <td>'.$no.'</td>
-        <td>'.$da["nama"].'</td>
-        <td>'.$da["nisn"].'</td>
-        <td>'.$da["kelas"].'</td>
+        echo "<tr>
+        <td>$no</td>
+        <td>$da[nama]</td>
+        <td>$da[nisn]</td>
+        <td>$da[kelas]</td>
         <td>
-        <a href="controller/siswaController.php?aksi&id='.$da["id"].'"
-        class="btn btn-sm btn-danger">Hapus</a>
-        
-        <a href="view/edit.php?id='.$da["id"].'" class="btn btn-sm btn-warning">Edit</a>
+         <a href='controller/siswaController.php?aksi=delete&id=$da[id]' class='btn btn-sm btn-danger'>Hapus</a>
+        <a href='view/siswa/edit.php?id=$da[id]' class='btn btn-sm btn-warning'>Edit</a>
         </td>
-        </tr>';
+        </tr>";
         $no++;
     }
 ?>
