@@ -13,7 +13,7 @@ class Koneksi
         ($this->p_host,$this->p_username,
         $this->p_password,$this->p_database);
     }
-
+  
     public function cek_koneksi(){
         if ($this->p_koneksi){
             echo "Koneksi Berhasil";
