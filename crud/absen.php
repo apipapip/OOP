@@ -17,10 +17,11 @@
 
     if(isset($_POST['unik_id'])){
         $siswa=new Siswa();
-        if($data=$siswa->cari_siswa_by_id($_POST['unik_id'])){
+        if($data=$siswa->cari_siswa_by_unik_id($_POST['unik_id'])){
             echo "Nama:{$data['nama']}<br>";
             echo "NISN:{$data['nisn']}<br>";
             echo "Kelas:{$data['kelas']}";
+            $absen=new Absen();
             $absen->simpan_absen($data['id']);
         }else{
             echo "<h1>Data Tidak Ditemukan</h1>";

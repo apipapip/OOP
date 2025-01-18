@@ -45,6 +45,7 @@
         <td>
          <a href='controller/siswaController.php?aksi=delete&id=$da[id]' class='btn btn-sm btn-danger'>Hapus</a>
         <a href='view/siswa/edit.php?id=$da[id]' class='btn btn-sm btn-warning'>Edit</a>
+        <a href='view/qrcode.php?id=$da[id]' class='btn btn-sm btn-primary'>QR</a>
         </td>
         </tr>";
         $no++;
